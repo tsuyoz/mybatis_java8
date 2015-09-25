@@ -29,6 +29,6 @@ public class LocalDateTypeHandler extends BaseTypeHandler<LocalDate> {
     }
 
     private LocalDate toLocalDate(Date date) {
-		return date == null ? null : date.toLocalDate(); 
-	}
+        return date == null ? null : date.toLocalDate();
+    }
 }

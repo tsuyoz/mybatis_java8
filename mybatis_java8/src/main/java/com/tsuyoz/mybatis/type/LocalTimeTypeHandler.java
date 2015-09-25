@@ -8,7 +8,7 @@ import java.time.LocalTime;
 
 public class LocalTimeTypeHandler extends BaseTypeHandler<LocalTime> {
 
-	@Override
+    @Override
     public void setNonNullParameter(PreparedStatement ps, int i, LocalTime time, JdbcType jdbcType) throws SQLException {
         ps.setTime(i, Time.valueOf(time));
     }
@@ -29,6 +29,6 @@ public class LocalTimeTypeHandler extends BaseTypeHandler<LocalTime> {
     }
 
     private LocalTime toLocalTime(Time time) {
-		return time == null ? null : time.toLocalTime();
-	}
+        return time == null ? null : time.toLocalTime();
+    }
 }
